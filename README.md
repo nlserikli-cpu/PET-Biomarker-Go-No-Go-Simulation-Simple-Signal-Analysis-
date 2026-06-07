@@ -1,25 +1,36 @@
-# PET-Biomarker-Go-No-Go-Simulation-Simple-Signal-Analysis-
-## PET Biomarker Go/No-Go Simulation
+# PET Biomarker Go/No-Go Simulation
 
-### Overview  
-This project is a small exploratory simulation of how PET-derived biomarker signals might be interpreted in early-stage drug development, particularly in the context of go/no-go decision-making.
+### Overview
 
-Rather than aiming for a full analytical pipeline, the focus here is on illustrating how differences in imaging signals between experimental conditions could be translated into a simple decision making framework.
+This project is a small personal exploration of how PET imaging signals might be used in early drug development to support simple go/no-go decisions.
 
-### Method  
-Two simplified groups were generated:
-- A control group representing baseline PET signal levels  
-- A treatment group representing a potential drug-induced effect  
+The idea is to compare two simplified conditions (control vs. treatment) and see how differences in signal distributions might translate into a decision rule under uncertainty.
 
-Signal distributions were simulated and compared using basic statistics.
+The project is purely exploratory and does not represent a real clinical dataset or validated model.
 
-### Decision Framework  
-A simple threshold-based approach was used to approximate early decision logic:
-- If the observed difference in signal exceeds a predefined threshold → GO  
-- Otherwise → NO-GO  
+### What the simulation does
 
-### Relevance  
-In early drug development, imaging biomarkers such as PET can provide early readouts of biological response before clinical outcomes are available. Understanding how these signals are interpreted is a key part of early-stage decision-making.
+- Generates synthetic PET-like signal data for a control group
+- Generates a second group with a simulated treatment effect
+- Compares the average signal between groups
+- Estimates a simple effect size to describe the difference
 
-### Note  
-This is a conceptual simulation intended for educational and exploratory purposes. It does not use real PET datasets or represent a validated clinical model.
+### Decision rule
+
+A basic threshold-based rule is used:
+
+- If the effect is strong enough → GO  
+- If the effect is weak or unclear → NO-GO  
+
+A simple confidence score is also calculated to reflect how strongly the two distributions differ. This is only a heuristic and not a statistical inference method.
+
+### Output
+
+The simulation produces:
+- summary statistics for both groups
+- a simple GO / NO-GO decision
+- a visualization of the signal distributions
+
+### Note
+
+This is a simplified educational model written to explore how imaging signals might be translated into decision logic. It is not based on real PET data and does not represent a clinical or predictive tool.
